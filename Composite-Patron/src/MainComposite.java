@@ -13,6 +13,22 @@ public class MainComposite {
         Empleado carlos=new Empleado("Carlos","Vendedor",5000);
         //Equipos nivel 3
         GrupoOrganizativo backend=new GrupoOrganizativo("Backend","Equipo");
-
+        backend.agregar(ana);
+        backend.agregar(luis);
+        GrupoOrganizativo frontend=new GrupoOrganizativo("Frontend","Equipo");
+        frontend.agregar(sara);
+        frontend.agregar(pedro);
+        GrupoOrganizativo comercial=new GrupoOrganizativo("Comercial","Equipo");
+        comercial.agregar(rosa);
+        comercial.agregar(carlos);
+        GrupoOrganizativo tecnologia=new GrupoOrganizativo("Tecnología","Departamento");
+        tecnologia.agregar(backend);
+        tecnologia.agregar(frontend);
+        GrupoOrganizativo ventas=new GrupoOrganizativo("Ventas","Departamento");
+        ventas.agregar(comercial);
+        GrupoOrganizativo techCorp=new GrupoOrganizativo("TechCorp","Empresa");
+        techCorp.agregar(tecnologia);
+        techCorp.agregar(ventas);
+        techCorp.mostrar("   ");
     }
 }
